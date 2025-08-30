@@ -1,5 +1,4 @@
 import Link from "next/link";
-import BookCard from "@/components/BookCard";
 
 export default function HomePage() {
   return (
@@ -18,20 +17,7 @@ export default function HomePage() {
         >
           Przejdź do listy
         </Link>
-      </div>
-      <BookCard
-        book={{
-          id: "bk-1",
-          title: "Clean Code",
-          author: "Robert C. Martin",
-          tags: ["programming", "best-practices"],
-          status: "reading",
-          rating: 5,
-          notes: "Rozdziały o nazwach i funkcjach — złoto.",
-          createdAt: Date.now() - 1000 * 60 * 60 * 24 * 5,
-          updatedAt: Date.now() - 1000 * 60 * 60,
-        }}
-      />
+      </div>    
     </section>
   );
 }
