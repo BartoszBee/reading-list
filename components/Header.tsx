@@ -21,7 +21,7 @@ export default function Header() {
           {nav.map((item) => {
             const active = item.href === pathname;
             return(<li key={item.href}>
-                 <Link href={item.href} className={`px-3 py-1 text-sm transition hover:bg-blue-600 hover:text-white rounded ${active ? "bg-blue-400 text-white" : ""}`}>{item.label}</Link>
+                 <Link href={item.href} className={`px-3 py-1 text-sm transition hover:bg-blue-600 hover:text-white rounded ${active ? "bg-blue-500 text-white" : ""}`}>{item.label}</Link>
             </li>)
            
           })}
