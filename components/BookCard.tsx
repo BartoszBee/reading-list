@@ -48,13 +48,13 @@ export default function BookCard({ book }: { book: Book }) {
             className="underline-offset-2 hover:underline"
             aria-label={`Zobacz szczegóły: ${book.title} autora ${book.author}`}
           >
-            {book.title}
+            &quot;{book.title}&quot;
           </Link>
         </h3>
         <StatusBadge status={book.status} />
       </header>
 
-      <p className="mt-1 text-sm text-gray-600">
+      <p className="mt-1 text-sm text-gray-600 text-center">
         Autor: <span className="font-medium">{book.author}</span>
       </p>
 
@@ -74,10 +74,10 @@ export default function BookCard({ book }: { book: Book }) {
       </div>
 
       {book.notes ? (
-        <p className="mt-3 line-clamp-2 text-sm text-gray-700">{book.notes}</p>
+        <p className="mt-3 line-clamp-2 text-sm text-gray-700 text-center">{book.notes}</p>
       ) : null}
 
-      <footer className="mt-3 text-xs text-gray-500">
+      <footer className="mt-3 text-xs text-gray-500 text-center">
         Dodano: {new Date(book.createdAt).toLocaleDateString()}
       </footer>
     </article>

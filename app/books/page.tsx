@@ -1,3 +1,7 @@
+"use client";
+import BookCard from "@/components/BookCard";
+import { MOCK_BOOKS } from "@/mock/mock-books";
+
 export default function BooksPage() {
   return (
     <section className="space-y-4">
@@ -12,10 +16,19 @@ export default function BooksPage() {
       </header>
 
       <div className="rounded-lg border bg-white p-4">
-        {/* Jutro: tu wstawimy listę BookCard i panel filtrów */}
-        <p className="text-sm text-gray-500">
-          Brak danych — dodaj pierwszą książkę.
-        </p>
+        {MOCK_BOOKS.length === 0 ? (
+          <p className="text-sm text-gray-500">
+            Brak danych — dodaj pierwszą książkę.
+          </p>
+        ) : (
+          <ul>
+            {MOCK_BOOKS.map((book) => (
+              <li key={book.id}>
+                <BookCard book={book} />
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </section>
   );
