@@ -9,8 +9,8 @@ import {
   useState,
 } from "react";
 import type { Book, BookStatus } from "@/types/book";
-import { MOCK_BOOKS } from "@/mock/mock-books";
-import { error } from "console";
+
+
 
 type NewBookInput = {
   title: string;
@@ -38,7 +38,7 @@ function makeId() {
     .slice(2, 6)}}`;
 }
 
-export function BookProvider({ children }: { children: React.ReactNode }) {
+export function BooksProvider({ children }: { children: React.ReactNode }) {
   const [isReady, setIsReady] = useState(false);
   const [books, setBooks] = useState<Book[]>([]);
 
