@@ -8,7 +8,7 @@ export default function BooksPage() {
       <header className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold">Twoje książki</h2>
         <button
-          className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700"
+          className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700 cursor-pointer"
           aria-label="Dodaj książkę"
         >
           + Dodaj
