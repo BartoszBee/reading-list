@@ -135,7 +135,7 @@ export default function BookForm({ onAdded, onCancel }: Props) {
       <div className="flex gap-2">
         <button
           type="submit"
-          className="rounded bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700"
+          className="rounded bg-blue-600 px-4 cursor-pointer py-2 text-sm text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed"
           disabled={!canSubmit}
         >
           Zapisz
